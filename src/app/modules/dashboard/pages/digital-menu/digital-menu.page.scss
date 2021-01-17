@@ -1,0 +1,88 @@
+
+.promotions-container {
+  margin-top: 16px;
+  display: flex;
+  overflow: scroll;
+}
+
+.promotion-card {
+  padding: 13px 10px;
+  background-color: black;
+  min-height: 7rem;
+  min-width: 13rem;
+  width: 13rem;
+  border-radius: 8px;
+  margin-left: 16px;
+  position: relative;
+
+  h4, p {
+    color: white;
+  }
+
+  h4 {
+    font-size: 15px;
+    width: 60%;
+    margin-top: 10px !important;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+
+  p {
+    line-height: 16px;
+    margin-top: 5px;
+    font-size: 13px;
+    width: 80%;
+    margin-bottom: 6px !important;
+  }
+}
+
+.subpromotion-item {
+  position: absolute;
+  background-color: #f53d7a;
+  top: 0;
+  right: 0;
+  border-radius: 0 8px 0 22px;
+  width: 62px !important;
+  min-height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+.menu-categories-container {
+  margin: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  .category-col {
+    width: 100%;
+  }
+
+  .category-card {
+    width: 100%;
+    min-height: 9rem;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+
+    .category-description {
+      position: absolute;
+      bottom: 15px;
+      left: 13px;
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .top-line {
+      width: 27px;
+      border-top: 1px solid white;
+      margin-bottom: 2px;
+    }
+  }
+}

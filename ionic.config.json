@@ -1,0 +1,7 @@
+{
+  "name": "personalWaiter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
