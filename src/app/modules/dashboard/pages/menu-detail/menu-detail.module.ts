@@ -7,13 +7,19 @@ import { IonicModule } from '@ionic/angular';
 import { MenuDetailPageRoutingModule } from './menu-detail-routing.module';
 
 import { MenuDetailPage } from './menu-detail.page';
+import {MatChipsModule} from "@angular/material/chips";
+import {MenuItemDetailPageModule} from "../menu-item-detail/menu-item-detail.module";
+import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuDetailPageRoutingModule
+    MenuDetailPageRoutingModule,
+    MatChipsModule,
+    MenuItemDetailPageModule,
+    MatBottomSheetModule
   ],
   declarations: [MenuDetailPage]
 })

@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/digital-menu"></ion-back-button>
+      <!-- <ion-back-button [routerLink]="['/dashboard-tabs-menu/newReport']" color="primary"></ion-back-button> -->
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-icon mode="md" name="card-outline" class="cursor-pointer" style="margin-top: 1px; font-size: 1.3rem; height: 1.3rem; width: 1.3rem; color: #f63e79; margin-right: 1rem; font-weight: 500; margin-left: 1rem;"></ion-icon>
+    </ion-buttons>
+    <ion-title style="text-align: center;" mode="md">Burger House</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <div class="mt-4">
+    <div class="subtitle-container">
+      <h3>Tu orden</h3>
+    </div>
+  </div>
+
+  <div class="" style="padding: 16px;">
+    <div class="shopping-item-container" *ngFor="let shoppingItem of [1,1,1]">
+      <div class="cart-item-image" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,0)), url(' + '/assets/img/example-images/starter1.jpg' + ') no-repeat'}">
+      </div>
+
+      <div class="shopping-item-description pl-0">
+        <p class="shopping-item-title">Beef steak medium rare</p>
+
+        <div class="mb-3" style="display: flex; align-items: center;">
+          <div class="add-amount-container">
+            <button class="add-amount-button" mat-mini-fab aria-label="Example icon button with a plus one icon">
+              <mat-icon>remove</mat-icon>
+            </button>
+            <p class="mb-0">1</p>
+            <button class="add-amount-button" mat-mini-fab aria-label="Example icon button with a plus one icon">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+          <p class="mb-0 shopping-price">$500.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row add-menu-item-container">
+    <div class="col-12 text-center m-t-20-r display-center">
+      <button class="btn add-item-button" id="preapproval_start" (click)="goToSelectPayment()">Confirmar orden</button>
+    </div>
+  </div>
+
+</ion-content>

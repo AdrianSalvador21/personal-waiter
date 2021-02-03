@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'dashboard-menu-tabs',
+    redirectTo: 'digital-menu',
     pathMatch: 'full'
   },
   {
@@ -22,6 +22,18 @@ const routes: Routes = [
   {
     path: 'menu-detail',
     loadChildren: () => import('./modules/dashboard/pages/menu-detail/menu-detail.module').then( m => m.MenuDetailPageModule)
+  },
+  {
+    path: 'menu-item-detail',
+    loadChildren: () => import('./modules/dashboard/pages/menu-item-detail/menu-item-detail.module').then( m => m.MenuItemDetailPageModule)
+  },
+  {
+    path: 'menu-shopping-cart',
+    loadChildren: () => import('./modules/dashboard/pages/menu-shopping-cart/menu-shopping-cart.module').then( m => m.MenuShoppingCartPageModule)
+  },
+  {
+    path: 'payment-select',
+    loadChildren: () => import('./modules/dashboard/pages/payment-select/payment-select.module').then( m => m.PaymentSelectPageModule)
   }
 ];
 

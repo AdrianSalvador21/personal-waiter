@@ -1,4 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  StatusBarStyle,
+  Device,
+  Plugins,
+  Capacitor
+} from '@capacitor/core';
+import {NavController} from '@ionic/angular';
+
+const { StatusBar, Filesystem } = Plugins;
+if (Capacitor.isPluginAvailable('StatusBar')) {
+  StatusBar.show();
+}
 
 @Component({
   selector: 'app-digital-menu',
@@ -18,9 +30,21 @@ export class DigitalMenuPage implements OnInit {
     {image: 'assets/img/example-images/dessert1.jpg', label: 'Desserts', id: ''}
   ];
 
-  constructor() { }
+  constructor(public nav: NavController) {
+    StatusBar.setStyle({
+      style: StatusBarStyle.Light
+    });
+
+    StatusBar.setBackgroundColor({
+      color: '#f0f1f8'
+    });
+  }
 
   ngOnInit() {
+  }
+
+  goToDetail(category) {
+    this.nav.navigateForward('/menu-detail');
   }
 
 }

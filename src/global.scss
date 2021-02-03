@@ -34,6 +34,17 @@ ion-title {
   font-size: 18px;
 }
 
+ion-back-button {
+  --icon-font-size: 1.3rem !important;
+}
+
+/* ion-modal {
+  height: 95% !important;
+  position: absolute !important;
+  top: 5% !important;
+} */
+
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -277,9 +288,15 @@ mat-step-header {
   }
 }
 
+.mat-chip-list {
+  .mat-chip-list-wrapper {
+    flex-wrap: unset !important;
+  }
+}
+
 .button-container-fixed {
   position: fixed;
-  bottom: 3.5rem;
+  bottom: 0;
   left: 0;
   width: 100vw;
   padding-bottom: 8px;
@@ -345,6 +362,7 @@ ion-button {
 ion-title {
   color: #1e2642;
   font-weight: 800 !important;
+  line-height: normal !important;
 }
 
 .sc-ion-action-sheet-md-h {
@@ -429,4 +447,50 @@ app-root:empty+.loader {
 
 .my-custom-interface .select-interface-option {
   color: red !important;
+}
+
+.mat-bottom-sheet-container, mat-bottom-sheet-container.mat-bottom-sheet-container {
+  background: #fafafa !important;
+  height: 95vh;
+  max-height: 747px !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  overflow-y: scroll;
+  border-radius: 9px 9px 0 0;
+}
+
+.menu-complements-options{
+  padding: 16px 16px;
+  mat-radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-radio-label {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    font-size: 13px;
+  }
+
+  .mat-radio-label-content {
+    padding-left: 0 !important;
+  }
+
+  .mat-radio-outer-circle {
+    height: 17px !important;
+    width: 17px !important;
+    border-width: 1px !important;
+  }
+
+  .mat-radio-inner-circle {
+    height: 17px;
+    width: 17px;
+  }
+}
+
+button:active, button:focus {
+  outline: none !important;
 }

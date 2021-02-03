@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border" mode="md">
   <ion-toolbar mode="md">
     <ion-buttons slot="end">
-      <ion-icon mode="md" name="bag-check-outline" class="cursor-pointer" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; color: #f63e79; margin-right: 0.7rem; font-weight: 500; margin-left: 0.2rem;"></ion-icon>
+      <ion-icon mode="md" name="card-outline" class="cursor-pointer" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; color: #f63e79; margin-right: 1rem; font-weight: 500; margin-left: 0;"></ion-icon>
     </ion-buttons>
     <ion-title style="text-align: center;" mode="md">Restaurant</ion-title>
   </ion-toolbar>
@@ -10,7 +10,7 @@
 <ion-content color="light">
   <div class="mt-4">
     <div class="subtitle-container">
-      <h3>Promotions</h3>
+      <h3>Promociones</h3>
     </div>
     <div class="promotions-container hide-scrollbar">
       <div class="promotion-card" *ngFor="let promotion of [1,1,1,1]" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)) top center/cover, url(' + example1 + ') no-repeat center center', 'background-size': 'cover'}">
@@ -26,12 +26,12 @@
 
   <div class="mt-4">
     <div class="subtitle-container">
-      <h3>Menu</h3>
+      <h3>Menú</h3>
     </div>
 
     <div class="menu-categories-container">
       <div class="category-col" *ngFor="let category of menuCategories; let i = index">
-        <div class="category-card" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)) top center/cover, url(' + category.image + ') no-repeat center center', 'background-size': 'cover'}">
+        <div class="category-card" (click)="goToDetail(category)" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)) top center/cover, url(' + category.image + ') no-repeat center center', 'background-size': 'cover'}">
           <div class="category-description">
             <div class="top-line"></div>
             <span class="mb-0">{{category.label}}</span>

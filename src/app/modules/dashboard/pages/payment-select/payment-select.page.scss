@@ -1,0 +1,92 @@
+
+.payment-select-container {
+  padding: 16px;
+}
+
+.payment-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 14px 14px;
+}
+
+.payment-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.payment-description {
+  font-size: 13px;
+}
+
+.add-menu-item-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0 !important;
+  height: 59px;
+  z-index: 100;
+  text-align: center;
+  background-color: white;
+
+  .add-item-button {
+    background-color: #f73d79;
+    color: white;
+    min-width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    border-radius: 7px;
+    height: 2.5rem;
+  }
+}
+
+
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+  @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+
+.selected-loan {
+  border: 0.5px solid #f73d79;
+  box-shadow: none;
+  transition: 0.15s ease;
+  .checked {
+    position: absolute;
+    z-index: 100;
+    right: -18px;
+    top: -18px;
+    height: 28px;
+    width: 28px;
+    border: 0.5px solid rgba(#f73d79, 0.9);
+    border-radius: 50%;
+    padding: 2px 0 0 2px;
+    background-color: white;
+    box-shadow: none;
+
+    @include on-event {
+      border: 0.5px solid #f73d79;
+      box-shadow: none;
+    }
+  }
+}
