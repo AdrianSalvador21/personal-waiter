@@ -7,7 +7,7 @@ import {
 } from '@capacitor/core';
 import {NavController} from '@ionic/angular';
 
-const { StatusBar, Filesystem } = Plugins;
+const { StatusBar, Filesystem, Geolocation } = Plugins;
 if (Capacitor.isPluginAvailable('StatusBar')) {
   StatusBar.show();
 }
@@ -41,10 +41,20 @@ export class DigitalMenuPage implements OnInit {
   }
 
   ngOnInit() {
+    this.getCurrentPosition();
+  }
+
+  async getCurrentPosition() {
+    const coordinates = await Geolocation.getCurrentPosition();
+    console.log('Current', coordinates);
   }
 
   goToDetail(category) {
     this.nav.navigateForward('/menu-detail');
+  }
+
+  showOnboarding() {
+    this.nav.navigateForward('/onboarding-info');
   }
 
 }

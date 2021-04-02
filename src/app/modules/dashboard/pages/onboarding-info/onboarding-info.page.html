@@ -1,0 +1,54 @@
+<ion-content>
+  <ion-slides autoplay="7000" speed="800" pager="true" style="height: 100% !important;">
+
+    <ion-slide>
+      <object typemustmatch class="hamburger-image" data="/assets/img/app-images/hamburger-man.svg"></object>
+      <div class="slide-description-content rl-bt-135">
+        <h1 class="slide-title">¡Bienvenido!</h1>
+        <p class="slide-description">Gracias por descargar nuestra App diseñada para ayudarte a mejorar la experiencia de tus clientes.</p>
+        <!-- <p>¡Sin costo!</p> -->
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/img/app-images/slide2.svg" alt="logo-simulation" class="slide-img">
+      <div class="slide-description-content rl-bt-135">
+        <h1 class="slide-title">Registra tu negocio</h1>
+        <p class="slide-description">De manera rápida, comienza registrando tu negocio para mejor el servicio a tus clientes.</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/img/app-images/slide3.svg" alt="logo-preapprover" class="slide-img">
+      <div class="slide-description-content rl-bt-135">
+        <h1 class="slide-title">Carga tu menú</h1>
+        <p class="slide-description">Podrás cargar tus distintos menús con sus distintas categorías.</p>
+        <p class="slide-description">¡Edita tu contenido las veces que necesites!</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/img/app-images/slide4.svg" alt="logo-sale" class="slide-img">
+      <div class="slide-description-content rl-bt-135">
+        <h1 class="slide-title">Controla tus pedidos</h1>
+        <p class="slide-description">Recibirás en tiempo real los pedidos de tus clientes que se encuentrén en tu negocio.</p>
+        <p class="slide-description">¡Vende más y mejor!</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/img/app-images/slide5.svg" alt="logo-process" class="slide-img">
+      <div class="slide-description-content rl-bt-135">
+        <h1 class="slide-title">Compártelo con tus clientes</h1>
+        <p class="slide-description">Podrás generar el código QR para compartirlo con tus clientes, ya sea en tu negocio, o en tus redes sociales.</p>
+      </div>
+
+      <ion-row style="position: absolute; bottom: -2rem;">
+        <ion-col>
+          <button (click)="closeOnboarding()" class="closeBtn slide-description-content rl-bt-170">Comenzar</button>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

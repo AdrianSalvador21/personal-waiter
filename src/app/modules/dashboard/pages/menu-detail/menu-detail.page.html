@@ -19,8 +19,8 @@
     </div>
 
     <div class="categories-chips hide-scrollbar mt-3">
-      <div class="category-chip chip-active" [ngClass]="{'chip-active': i === 0}"  *ngFor="let chip of [1,1,1,1,1,1]; let i = index;">
-        <span class="">Menu 1</span>
+      <div class="category-chip chip-active" (click)="selectedSubcategory = i" [ngClass]="{'chip-active': selectedSubcategory === subCategory.id}"  *ngFor="let subCategory of menuSubcategories; let i = index;">
+        <span class="">{{subCategory.label}}</span>
       </div>
     </div>
   </div>

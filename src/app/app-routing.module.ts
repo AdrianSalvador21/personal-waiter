@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'digital-menu',
+    redirectTo: 'dashboard-menu-tabs',
     pathMatch: 'full'
   },
   {
@@ -34,6 +34,22 @@ const routes: Routes = [
   {
     path: 'payment-select',
     loadChildren: () => import('./modules/dashboard/pages/payment-select/payment-select.module').then( m => m.PaymentSelectPageModule)
+  },
+  {
+    path: 'onboarding-info',
+    loadChildren: () => import('./modules/dashboard/pages/onboarding-info/onboarding-info.module').then( m => m.OnboardingInfoPageModule)
+  },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./modules/security/pages/welcome/welcome.module').then( m => m.WelcomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./modules/security/pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./modules/security/pages/register/register.module').then( m => m.RegisterPageModule)
   }
 ];
 

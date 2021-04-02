@@ -10,6 +10,7 @@ import {MatBottomSheet} from "@angular/material/bottom-sheet";
 })
 export class MenuDetailPage implements OnInit {
   backdropVisible = false;
+  selectedSubcategory = 0;
   winX = null;
   winY = null;
   menuData = [
@@ -17,6 +18,16 @@ export class MenuDetailPage implements OnInit {
     {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/salad1.jpg', price: 500, favorite: false, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
     {name: 'Beef steak medium rare', offer: 15, image: 'assets/img/example-images/dish1.jpg', price: 500, favorite: false, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
     {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/soup1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20}
+  ];
+
+  menuSubcategories = [
+    {label: 'Promociones', id: 0},
+    {label: 'Menú', id: 1},
+    {label: 'Extras', id: 2},
+    {label: 'Bebidas', id: 3},
+    {label: 'Postres', id: 4},
+    {label: 'Combos', id: 5},
+    {label: 'Cervezas', id: 6}
   ];
 
   constructor(public nav: NavController, private changeDetectorRef: ChangeDetectorRef, public modalCtrl: ModalController, private bottomSheet: MatBottomSheet) { }

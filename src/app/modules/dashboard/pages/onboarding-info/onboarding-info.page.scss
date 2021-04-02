@@ -1,0 +1,128 @@
+ion-slide {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-img {
+  position: absolute;
+  top: 13rem;
+  width: 43%;
+}
+
+  .slide-title {
+    margin-top: 1rem;
+    font-size: 28px;
+    color: #1e1b53;
+    letter-spacing: -1px;
+    font-weight: 600;
+    padding: 0 5px;
+  }
+
+.slide-description-content {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.rl-bt-135 {
+  bottom: -4rem !important;
+}
+
+.rl-bt-200 {
+  bottom: 200px !important; ;
+}
+
+.rl-bt-170 {
+  bottom: 170px !important; ;
+}
+
+.slide-description {
+  padding: 0 19px;
+}
+
+.closeBtn{
+  background-color: #f53d7a;
+  color: white;
+  width: 100%;
+  padding: 13px 38px !important;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+  left: 0;
+  bottom: 55px;
+  width: 100%;
+}
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #f53d7a;
+    opacity: 1;
+    width: 16px !important;
+    border-radius: 9px;
+  }
+
+
+.hamburger-image {
+  width: 18rem !important;
+  height: 11rem;
+  position: absolute;
+  top: 13rem;
+
+  svg {
+    #right-wheel {
+      animation: wheel 1s linear infinite;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    #top-bread{
+      animation: bike 2s ease-in-out infinite alternate;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    #basic-content{
+      animation: bikeTwo 2s ease-in-out infinite alternate;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    @keyframes wheel {
+      from {
+        transform: rotateZ(0deg);
+      }
+
+      to {
+        transform: rotateZ(360deg);
+      }
+    }
+
+    @keyframes bike {
+      from {
+        transform: translateY(0%);
+      }
+
+      to {
+        transform: translateY(-10%);
+      }
+    }
+
+    @keyframes bikeTwo {
+      from {
+        transform: rotateZ(0deg);
+      }
+
+      to {
+        transform: rotateZ(10deg);
+      }
+    }
+  }
+}

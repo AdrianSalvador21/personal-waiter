@@ -29,9 +29,13 @@
   font-family: 'Open Sans', sans-serif !important;
 }
 
+.mat-form-field-label {
+  font-weight: 200 !important;
+}
+
 ion-title {
   font-weight: 600 !important;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 ion-back-button {
@@ -53,12 +57,15 @@ ion-back-button {
   padding-left: 15px;
 
   h3 {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 300;
     margin-bottom: 0 !important;
     color: #222b45;
     border-left: 2px solid #f63e79;
     padding-left: 5px;
+    display: flex;
+    align-items: center;
+    height: 24px;
   }
 }
 
@@ -212,7 +219,7 @@ mat-step-header {
 }
 
 .mat-form-field-label {
-  font-weight: 600 !important;
+  // font-weight: 600 !important;
   // color: #020202 !important;
   // color: #020202b8 !important;
 }
@@ -361,7 +368,7 @@ ion-button {
 
 ion-title {
   color: #1e2642;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   line-height: normal !important;
 }
 
@@ -493,4 +500,15 @@ app-root:empty+.loader {
 
 button:active, button:focus {
   outline: none !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f53d7a !important;
+}
+
+.hamburger-image {
+  width: 18rem !important;
+  height: 11rem;
+  position: absolute;
+  top: 13rem;
 }

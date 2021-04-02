@@ -40,6 +40,11 @@ ion-back-button {
   /* color: white !important; */
   font-weight: 600 !important;
   color: #f73d79;
+  -webkit-transition: border-bottom-color 300ms linear;
+  -moz-transition: border-bottom-color 300ms linear;
+  -o-transition: border-bottom-color 300ms linear;
+  -ms-transition: border-bottom-color 300ms linear;
+  transition: border-bottom-color 300ms linear;
 }
 
 .category-chip {
@@ -60,7 +65,7 @@ ion-back-button {
   .menu-item-image {
     background-position: center !important;
     background-size: cover !important;
-    min-height: 8rem;
+    min-height: 9rem;
     position: relative;
 
     ion-icon {
