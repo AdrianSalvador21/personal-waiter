@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./modules/security/pages/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'address-select',
+    loadChildren: () => import('./modules/dashboard/pages/address-select/address-select.module').then( m => m.AddressSelectPageModule)
   }
 ];
 

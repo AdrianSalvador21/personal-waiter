@@ -1,0 +1,51 @@
+<ion-content color="light">
+  <div class="mt-2">
+    <div class="search-input-container">
+      <ion-searchbar (ionChange)="searchAddress($event)" debounce="1000" searchIcon="location-outline" placeholder="Ingresa una dirección"></ion-searchbar>
+      <!--<div class="input-container">
+        <ion-icon mode="md" name="location-outline" class="cursor-pointer" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; font-weight: 500; margin-left: 0;"></ion-icon>
+        <ion-input placeholder="Ingresa una dirección"></ion-input>
+        <ion-icon mode="md" name="close-circle" class="cursor-pointer" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; font-weight: 500; margin-left: 0;"></ion-icon>
+      </div>-->
+      <p class="mb-0" (click)="closeDialog()">Cancelar</p>
+    </div>
+  </div>
+  
+  <div>
+
+    <div id="map" class="set-address-map" *ngIf="showMap">
+    </div>
+
+    <div class="autocomplete-address-container">
+      <ion-list *ngIf="!showMap">
+        <ion-item *ngFor="let address of googleAC.autocompleteOptions" (click)="setUserAddress(address.description)">
+          <div class="autocomplete-address-detail">
+            <ion-icon mode="md" name="pin-outline" class="cursor-pointer" style="font-size: 1rem; height: 1rem; width: 1rem; font-weight: 500; margin-left: 0;"></ion-icon>
+            <div>
+              <h4 class="mb-0">{{address.structured_formatting.main_text}}</h4>
+              <p class="mb-0">{{address.structured_formatting.secondary_text}}</p>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="autocomplete-address-detail">
+            <ion-icon mode="md" name="navigate-circle" class="cursor-pointer" style="font-size: 1.2rem; height: 1.2rem; width: 1.2rem; color: #0c9e0c; font-weight: 500; margin-left: 0;"></ion-icon>
+            <div>
+              <h4 class="mb-0">Ubicación actual</h4>
+              <p class="mb-0">{{formattedAddress}}</p>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="autocomplete-address-detail" (click)="initMap()">
+            <ion-icon mode="md" name="pin-outline" class="cursor-pointer" style="font-size: 1rem; height: 1rem; width: 1rem; font-weight: 500; margin-left: 0;"></ion-icon>
+            <div>
+              <h4 class="mb-0">¿No encuentras la dirección?</h4>
+              <p class="mb-0">Fija la dirección en el mapa</p>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

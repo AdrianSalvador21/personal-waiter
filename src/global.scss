@@ -26,7 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 * {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .mat-form-field-label {
@@ -58,7 +58,7 @@ ion-back-button {
 
   h3 {
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 0 !important;
     color: #222b45;
     border-left: 2px solid #f63e79;
@@ -95,6 +95,18 @@ ion-back-button {
   margin-bottom: 6rem !important;
 }
 
+.mr-16 {
+  margin-right: 16px;
+}
+
+.ml-18 {
+  margin-left: 18px;
+}
+
+.pr-16 {
+  padding-right: 16px;
+}
+
 .mb-2r {
   margin-bottom: 2rem !important;
 }
@@ -109,6 +121,10 @@ ion-back-button {
 
 .black-text {
   color: #000;
+}
+
+.pd-r-1r {
+  padding-right: 1rem;
 }
 
 .primary-text {
@@ -368,8 +384,9 @@ ion-button {
 
 ion-title {
   color: #1e2642;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   line-height: normal !important;
+  font-size: 16px;
 }
 
 .sc-ion-action-sheet-md-h {
@@ -511,4 +528,21 @@ button:active, button:focus {
   height: 11rem;
   position: absolute;
   top: 13rem;
+}
+
+
+.searchbar-input.sc-ion-searchbar-md {
+  padding-left: unset;
+  /* padding-right: unset; */
+  /* -webkit-padding-start: 55px; */
+  padding-inline-start: 48px;
+  -webkit-padding-end: 38px;
+  font-size: 14px !important;
+  /* padding-inline-end: 55px; */
+}
+
+ion-item {
+  .item-native {
+    padding: 0;
+  }
 }

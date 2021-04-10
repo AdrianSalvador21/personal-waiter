@@ -1,9 +1,10 @@
 <ion-header class="ion-no-border" mode="md">
   <ion-toolbar mode="md" class="main-toolbar">
     <div class="toolbar-conntent">
-      <div class="display-center">
-        <ion-icon (click)="showOnboarding()" mode="md" name="location-outline" class="cursor-pointer mr-2" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; font-weight: 500; margin-left: 0;"></ion-icon>
-        <p class="mb-0">Address</p>
+      <div class="display-center" (click)="openAddressSelect()">
+        <ion-icon mode="md" name="location-outline" class="cursor-pointer mr-2" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; font-weight: 500; margin-left: 0;"></ion-icon>
+        <p class="mb-0 addressText" *ngIf="formattedAddress !== ''">{{formattedAddress}}</p>
+        <p class="mb-0 addressText" *ngIf="formattedAddress === ''">Dirección de envío</p>
       </div>
       <ion-icon (click)="showOnboarding()" mode="md" name="card-outline" class="cursor-pointer" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; color: black; font-weight: 500; margin-left: 0;"></ion-icon>
     </div>
@@ -11,10 +12,24 @@
 </ion-header>
 
 <ion-content color="light">
-  <div class="mt-4">
-    <div class="subtitle-container">
-      <h3>Promociones</h3>
+  <!-- <div class="">
+    <div class="">
+      <div>
+        <img src="/assets/img/example-images/cocktail1.jpg">
+      </div>
     </div>
+  </div> -->
+
+  <div class="mt-4">
+    <div class="categories-container hide-scrollbar">
+      <div class="category-item-container"  [ngClass]="{'ml-18': idx === 0, 'pr-16': idx === menuSimpleCategories.length - 1}" *ngFor="let cateogory of menuSimpleCategories; let idx = index">
+        <img [src]="cateogory.image">
+        <p class="mb-0">{{cateogory.label}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-2">
     <div class="promotions-container hide-scrollbar">
       <div class="promotion-card" *ngFor="let promotion of [1,1,1,1]" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)) top center/cover, url(' + example1 + ') no-repeat center center', 'background-size': 'cover'}">
         <div class="subpromotion-item">
