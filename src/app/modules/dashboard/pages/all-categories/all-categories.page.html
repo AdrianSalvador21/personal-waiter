@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar mode="md">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/digital-menu"></ion-back-button>
+      <!-- <ion-back-button [routerLink]="['/dashboard-tabs-menu/newReport']" color="primary"></ion-back-button> -->
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-icon mode="md" name="card-outline" class="cursor-pointer" style="margin-top: 1px; font-size: 1.3rem; height: 1.3rem; width: 1.3rem; color: #f63e79; margin-right: 1rem; font-weight: 500; margin-left: 1rem;"></ion-icon>
+    </ion-buttons>
+    <ion-title style="text-align: center;" mode="md">Burger House</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="mt-4">
+    <div class="subtitle-container">
+      <h3>Categorías</h3>
+    </div>
+
+    <div class="menu-categories-container">
+      <div class="category-col" *ngFor="let category of menuCategories; let i = index">
+        <div class="category-card" (click)="goToDetail(category)" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)) top center/cover, url(' + category.image + ') no-repeat center center', 'background-size': 'cover'}">
+          <div class="category-description">
+            <div class="top-line"></div>
+            <span class="mb-0">{{category.label}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border" mode="md">
+<!-- <ion-header class="ion-no-border" mode="md">
   <ion-toolbar mode="md" class="main-toolbar">
     <div class="toolbar-conntent">
       <div class="display-center" (click)="openAddressSelect()">
@@ -9,22 +9,40 @@
       <ion-icon (click)="showOnboarding()" mode="md" name="card-outline" class="cursor-pointer" style="font-size: 1.3rem; height: 1.3rem; width: 1.3rem; color: black; font-weight: 500; margin-left: 0;"></ion-icon>
     </div>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content color="light">
-  <!-- <div class="">
-    <div class="">
-      <div>
-        <img src="/assets/img/example-images/cocktail1.jpg">
+  <div class="hero-restaurant-container">
+    <div (click)="showOnboarding()" class="hero-image-container" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.0)) top center/cover, url(' + '/assets/img/example-images/hero-digital-menu2.jpg' + ') no-repeat', 'background-size': 'cover'}">
+      <ion-icon mode="md" [name]="true ? 'heart' : 'heart-outline'" class="cursor-pointer"></ion-icon>
+    </div>
+
+    <div class="subtitle-container mt-4">
+      <h3>Burger House</h3>
+    </div>
+
+    <div class="mt-3">
+      <div class="information-address-container">
+        <div class="address-detail">
+          <ion-icon mode="md" name="location-outline" class="cursor-pointer address-icon"></ion-icon>
+          <p class="mb-0 detailsAddressText">Calle V. de los Remedios 123. Col. virgencitas Nezahualcoyotl</p>
+        </div>
+
+        <p class="mb-0 link" (click)="openAddressSelect()">Más información</p>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="mt-4">
     <div class="categories-container hide-scrollbar">
-      <div class="category-item-container"  [ngClass]="{'ml-18': idx === 0, 'pr-16': idx === menuSimpleCategories.length - 1}" *ngFor="let cateogory of menuSimpleCategories; let idx = index">
-        <img [src]="cateogory.image">
-        <p class="mb-0">{{cateogory.label}}</p>
+      <div class="category-item-container" (click)="goToDetail(category)" [ngClass]="{'ml-18': idx === 0}" *ngFor="let category of menuSimpleCategories; let idx = index">
+        <img [src]="category.image">
+        <p class="mb-0">{{category.label}}</p>
+      </div>
+
+      <div class="category-item-container pr-16" (click)="goToCategories()">
+        <img src="/assets/img/categories/more.svg">
+        <p class="mb-0">Más</p>
       </div>
     </div>
   </div>
@@ -42,7 +60,37 @@
     </div>
   </div>
 
+
+
   <div class="mt-4">
+    <div class="subtitle-container">
+      <h3>Favoritos</h3>
+    </div>
+
+    <div class="mb-4 mt-4" style="padding: 0 3px;">
+      <!-- <div class="menu-item-card mb-4" *ngFor="let menuItem of menuData" (click)="drawer.toggleDrawer()"> -->
+      <div class="menu-item-card mb-4" *ngFor="let menuItem of menuData" (click)="openMenuItemDetails(menuItem)">
+        <ion-card>
+
+          <div class="menu-item-image" [ngStyle]="{'background': 'linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,0)), url(' + menuItem.image + ') no-repeat'}">
+            <div class="offer-container" *ngIf="menuItem.offer !== 0">
+              <span>- {{menuItem.offer}}%</span>
+            </div>
+            <ion-icon mode="md" [name]="menuItem.favorite ? 'heart' : 'heart-outline'" class="cursor-pointer"></ion-icon>
+          </div>
+          <!-- <img src="assets/img/example-images/starter1.jpg" /> -->
+          <ion-card-content>
+            <h3 class="menu-item-title">{{menuItem.name}}</h3>
+
+            <p class="menu-item-description">{{menuItem.description}}</p>
+            <p class="menu-item-price mb-0">MXN {{menuItem.price | number: '1.2-2'}} <span class="text-muted">{{menuItem.minTime}}-{{menuItem.maxTime}} min</span></p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="mt-4">
     <div class="subtitle-container">
       <h3>Menú</h3>
     </div>
@@ -57,5 +105,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </ion-content>

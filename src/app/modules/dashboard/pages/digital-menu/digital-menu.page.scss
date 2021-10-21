@@ -1,3 +1,66 @@
+.menu-item-card {
+  padding: 0 7px;
+
+  .menu-item-image {
+    background-position: center !important;
+    background-size: cover !important;
+    min-height: 9rem;
+    position: relative;
+
+    ion-icon {
+      font-size: 1.3rem;
+      height: 1.2rem;
+      width: 1.2rem;
+      color: white;
+      font-weight: 500;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  .menu-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 1px;
+  }
+
+  .menu-item-description {
+    color: #2b2b2b;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .menu-item-price {
+    color: black;
+    font-size: 13px;
+  }
+
+  .offer-container {
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 0;
+    background-color: #f73d79;
+    text-align: center;
+    min-width: 4rem;
+    font-size: 11px;
+    padding: 0 0;
+    font-weight: 700;
+    border-radius: 0 5px 5px 0;
+  }
+
+  ion-card {
+    box-shadow: none;
+    border: none !important;
+  }
+
+  ion-card-content {
+    padding: 8px 0 8px 0;
+  }
+}
+
 .main-toolbar {
   .toolbar-conntent {
     display: flex;
@@ -39,6 +102,15 @@
   display: block;
   width: 55vw;
   font-weight: 600;
+  font-size: 13px;
+}
+
+.detailsAddressText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 55vw;
   font-size: 13px;
 }
 
@@ -130,3 +202,64 @@
     }
   }
 }
+
+.hero-restaurant-container {
+  .hero-image-container {
+    min-height: 16rem;
+    position: relative;
+
+    ion-icon {
+      font-size: 1.4rem;
+      height: 1.4rem;
+      width: 1.4rem;
+      color: white;
+      font-weight: 500;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+    }
+
+    .logo-image-container {
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      border-radius: 50%;
+      bottom: -45px;
+      left: 15px;
+    }
+  }
+
+  .restaurant-details {
+    margin: 16px;
+  }
+}
+
+.information-address-container {
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: space-between;
+  p {
+    font-size: 12px;
+  }
+
+  .link {
+    color: #1a6896;
+  }
+
+
+  .address-detail {
+    display: flex;
+    align-items: center;
+
+    .address-icon {
+      font-size: 1rem;
+      height: 1rem;
+      width: 1rem;
+      margin-left: 0;
+      margin-right: 3px;
+    }
+  }
+}
+
+

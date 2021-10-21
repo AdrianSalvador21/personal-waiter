@@ -7,6 +7,7 @@ import {AddressSelectPage} from '../address-select/address-select.page';
 import {AppState} from '../../../../app.reducer';
 import {Store} from '@ngrx/store';
 import {SetFormattedAddressAction} from '../../../../core/actions/user.action';
+import {MenuItemDetailPage} from "../menu-item-detail/menu-item-detail.page";
 
 const { StatusBar, Filesystem, Geolocation } = Plugins;
 if (Capacitor.isPluginAvailable('StatusBar')) {
@@ -42,6 +43,13 @@ export class DigitalMenuPage implements OnInit {
     {image: '/assets/img/categories/035-guacamole.png', label: 'Mexican Food', id: ''},
     {image: '/assets/img/categories/043-pudding.png', label: 'Desserts', id: ''},
     {image: '/assets/img/categories/050-dinner.png', label: 'Dinner', id: ''}
+  ];
+
+  menuData = [
+    {name: 'Beef steak medium rare', offer: 20, image: 'assets/img/example-images/starter1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
+    {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/salad1.jpg', price: 500, favorite: false, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
+    {name: 'Beef steak medium rare', offer: 15, image: 'assets/img/example-images/dish1.jpg', price: 500, favorite: false, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
+    {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/soup1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20}
   ];
 
   constructor(public nav: NavController, public changeDetectorRef: ChangeDetectorRef, private bottomSheet: MatBottomSheet, private store: Store<AppState>) {
@@ -92,6 +100,10 @@ export class DigitalMenuPage implements OnInit {
     this.nav.navigateForward('/menu-detail');
   }
 
+  goToCategories() {
+    this.nav.navigateForward('/all-categories');
+  }
+
   showOnboarding() {
     this.nav.navigateForward('/onboarding-info');
   }
@@ -109,6 +121,14 @@ export class DigitalMenuPage implements OnInit {
     const dw = w < 992 ? '80vw' : '60vw';
     const button = this.bottomSheet.open(AddressSelectPage, {
       data: {}
+    });
+  }
+
+  openMenuItemDetails(menuItem) {
+    const w = window.innerWidth;
+    const dw = w < 992 ? '80vw' : '60vw';
+    const button = this.bottomSheet.open(MenuItemDetailPage, {
+      data: {menuItem}
     });
   }
 }

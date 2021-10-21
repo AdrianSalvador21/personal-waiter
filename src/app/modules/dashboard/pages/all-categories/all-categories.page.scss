@@ -1,0 +1,35 @@
+.menu-categories-container {
+  margin: 16px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px 10px;
+
+  .category-col {
+    width: 100%;
+  }
+
+  .category-card {
+    width: 100%;
+    min-height: 9rem;
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+
+    .category-description {
+      position: absolute;
+      bottom: 15px;
+      left: 13px;
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .top-line {
+      width: 27px;
+      border-top: 1px solid white;
+      margin-bottom: 2px;
+    }
+  }
+}

@@ -17,6 +17,9 @@ export class MenuDetailPage implements OnInit {
     {name: 'Beef steak medium rare', offer: 20, image: 'assets/img/example-images/starter1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
     {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/salad1.jpg', price: 500, favorite: false, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
     {name: 'Beef steak medium rare', offer: 15, image: 'assets/img/example-images/dish1.jpg', price: 500, favorite: false, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
+    {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/soup1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
+    {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/soup1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
+    {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/soup1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20},
     {name: 'Beef steak medium rare', offer: 0, image: 'assets/img/example-images/soup1.jpg', price: 500, favorite: true, description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem blanditiis dignissimos.', minTime: 10, maxTime: 20}
   ];
 

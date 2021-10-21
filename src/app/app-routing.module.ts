@@ -54,6 +54,10 @@ const routes: Routes = [
   {
     path: 'address-select',
     loadChildren: () => import('./modules/dashboard/pages/address-select/address-select.module').then( m => m.AddressSelectPageModule)
+  },
+  {
+    path: 'all-categories',
+    loadChildren: () => import('./modules/dashboard/pages/all-categories/all-categories.module').then( m => m.AllCategoriesPageModule)
   }
 ];
 
